@@ -1,6 +1,6 @@
 {
   "posts_by_date": {
-    "20210617": [
+    "2021-06-17": [
       {
         "published_at": "2021-06-17 08:40:52",
         "is_published": true,
@@ -21,7 +21,7 @@
           "username": "socialorientation_test",
           "image": "cfe8008ac103ab6686983a449d1a7c3e.jpg",
           "link": "https://www.instagram.com/socialorientation_test",
-          "channel": "instagrambusiness"
+          "channel": "instagram"
         }
       },
       {
@@ -69,7 +69,7 @@
         }
       }
     ],
-    "20210701": [
+    "2021-07-01": [
       {
         "published_at": "2021-07-01 00:00:00",
         "is_published": false,
