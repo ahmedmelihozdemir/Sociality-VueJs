@@ -1,12 +1,12 @@
 <template>
     <div class="header">
-        <v-app-bar app color="brown" dark>
+        <v-app-bar app color="#47CEB6" dark>
             <div class="logo d-flex align-center">
                 <v-img
                     alt="Sociality Logo"
                     class="shrink mr-2"
                     contain
-                    src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+                    src="@/assets/sociality-og-image.png"
                     transition="scale-transition"
                     width="40"
                     @click.stop="drawer = !drawer"
@@ -16,7 +16,7 @@
                     class="shrink mt-1 hidden-sm-and-down"
                     contain
                     min-width="100"
-                    src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+                    src="@/assets/Sociality_Logo_MainV_positive.png"
                     width="100"
                 />
             </div>
