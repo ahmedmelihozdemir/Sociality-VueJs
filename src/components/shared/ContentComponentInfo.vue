@@ -20,7 +20,6 @@
                             }}</v-icon>
                         </v-list-item-icon>
                     </v-list-item>
-                    <div>=={{moreInfo}}</div>
                 </v-list>
             </v-navigation-drawer>
         </v-card>
@@ -33,8 +32,6 @@ import Component from "vue-class-component";
 import { Prop, Watch } from "vue-property-decorator";
 
 export default class ContentComponentInfo extends Vue {
-    @Prop() moreInfo!: boolean; 
-    /* moreInfo = true; */
     items = [
         { title: "Home", icon: "mdi-cog" },
         { title: "About", icon: "mdi-forum" },
@@ -45,14 +42,12 @@ export default class ContentComponentInfo extends Vue {
 <style lang="scss" scoped>
 .moreInfo {
     position: absolute;
-    /* top: 65px;
-    right: 23px; */
     top: 0;
     right: 0;
     z-index: 999;
     height: auto;
     width: auto;
-    /* overflow: auto; */
+    border-radius: 0 10px 0 10px;
     .info-drawer {
         background-color: transparent;
 

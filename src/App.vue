@@ -23,5 +23,7 @@ export default class App extends Vue {}
 <style lang="scss">
 #app{
     background-color: rgba(233, 221, 197, 0.679);
+    /* background-color: #F55661; */
+    /* background-color: #002E5F; */
 }
 </style>

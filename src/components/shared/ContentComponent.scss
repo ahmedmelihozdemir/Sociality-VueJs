@@ -13,20 +13,42 @@ $channelColor3: #1a8cd8;
 
 .content-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 10px;
+  @media only screen and (max-width: 1028px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media only screen and (max-width: 1620px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .content {
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px 40px;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    position: inherit;
+    @media only screen and (max-width: 620px) {
+      background-color: lightblue;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 200px;
+    }
     .container-container {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-
       .content-row {
         .content-col {
           .content-upper {
@@ -45,9 +67,6 @@ $channelColor3: #1a8cd8;
               font-family: "Courier New", Courier, monospace;
               font-size: 0.8rem;
               display: flex;
-              /*  flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;  */
               margin: 5px 10px;
             }
           }
@@ -71,8 +90,6 @@ $channelColor3: #1a8cd8;
               text-orientation: upright;
             }
             .content-img {
-              /* border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px; */
               border-radius: 10px;
               .card-title {
                 font-size: 0.8rem;

@@ -2,23 +2,30 @@
     <div class="header">
         <v-app-bar app color="#47CEB6" dark>
             <div class="logo d-flex align-center">
-                <v-img
-                    alt="Sociality Logo"
-                    class="shrink mr-2"
-                    contain
-                    src="@/assets/sociality-og-image.png"
-                    transition="scale-transition"
-                    width="40"
-                    @click.stop="drawer = !drawer"
-                />
-                <v-img
-                    alt="Sociality Name"
-                    class="shrink mt-1 hidden-sm-and-down"
-                    contain
-                    min-width="100"
-                    src="@/assets/Sociality_Logo_MainV_positive.png"
-                    width="100"
-                />
+                <a href="">
+                    <router-link to="/">
+                        <v-img
+                            alt="Sociality Logo"
+                            class="shrink mr-2"
+                            contain
+                            src="@/assets/sociality-og-image.png"
+                            transition="scale-transition"
+                            width="40"
+                        />
+                    </router-link>
+                </a>
+                <a>
+                    <router-link to="/">
+                        <v-img
+                            alt="Sociality Name"
+                            class="shrink mt-1 hidden-sm-and-down"
+                            contain
+                            min-width="100"
+                            src="@/assets/Sociality_Logo_MainV_positive.png"
+                            width="100"
+                        />
+                    </router-link>
+                </a>
             </div>
             <v-spacer></v-spacer>
             <v-btn
