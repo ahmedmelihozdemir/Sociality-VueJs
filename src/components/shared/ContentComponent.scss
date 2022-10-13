@@ -63,11 +63,35 @@ $channelColor3: #1a8cd8;
                 background-color: #47ceb6;
               }
             }
-            .content-published {
-              font-family: "Courier New", Courier, monospace;
-              font-size: 0.8rem;
+            .content-account-name {
               display: flex;
-              margin: 5px 10px;
+              flex-direction: column;
+              justify-content: start;
+              align-items: flex-start;
+              .content-published{
+                font-size: 0.8rem;
+                font-weight: 600;
+                color: #1a8cd8;
+              }
+              .content-account-title{
+                font-size: 1rem;
+                color: #5b42f3;
+                font-weight: bold;
+              }
+            }
+            .content-up-account{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              .content-up-account-img{
+                border: 2px solid #47ceb6;
+                border-radius: 50%;
+                &:hover{
+                  border: 2px solid #5b42f3;
+                  cursor: pointer;
+                }
+              }
             }
           }
           .content-card {

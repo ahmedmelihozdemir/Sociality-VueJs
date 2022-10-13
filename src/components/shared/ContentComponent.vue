@@ -24,9 +24,23 @@
                         cols="12"
                     >
                         <v-card-actions class="content-upper">
-                            <v-spacer class="content-published">
-                                {{ i[adx].published_at }}
+                            <v-spacer class="content-up-account">
+                                <v-img
+                                    class="content-up-account-img"
+                                    src="@/assets/socialorient.png"
+                                    :alt="i[adx].account.name"
+                                    height="70"
+                                    width="70"
+                                ></v-img>
                             </v-spacer>
+                            <div class="content-account-name mr-16">
+                                <div class="content-account-title">
+                                    {{ i[adx].account.name }}
+                                </div>
+                                <div class="content-published">
+                                    {{ i[adx].published_at }}
+                                </div>
+                            </div>
                             <v-btn class="btn-icon" icon>
                                 <v-icon>mdi-cancel</v-icon>
                             </v-btn>
@@ -40,7 +54,11 @@
                             >
                                 <v-icon>mdi-dots-horizontal</v-icon>
                             </v-btn>
-                            <v-btn class="btn-icon" icon @click="changeinfox(idx,adx)">
+                            <v-btn
+                                class="btn-icon"
+                                icon
+                                @click="changeinfox(idx, adx)"
+                            >
                                 {{ infox[adx] }}
                             </v-btn>
                         </v-card-actions>
@@ -62,7 +80,7 @@
                                 class="content-img white--text align-end"
                                 gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
                                 height="400px"
-                                max-width="470px"
+                                max-width="460px"
                             >
                                 <ContentComponentInfo
                                     v-if="info == true"
@@ -162,7 +180,7 @@ export default class InstagramView extends Vue {
         this.info = !this.info;
     }
 
-    changeinfox(idx:any, adx: any) {
+    changeinfox(idx: any, adx: any) {
         this.infox[idx[adx]] = !this.infox[idx[adx]];
     }
 
