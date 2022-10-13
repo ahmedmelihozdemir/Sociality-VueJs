@@ -13,8 +13,12 @@
                     :showMenuContent="showMenuContent"
                 ></MenuComponent>
             </v-col>
-            <v-col cols="16" md="6">
+            <v-col cols="12" md="4">
                 <ContentComponent></ContentComponent>
+            </v-col>
+        </v-row>
+        <v-row>
+            <v-col cols="12" md="6">
             </v-col>
         </v-row>
     </v-container>
@@ -27,6 +31,7 @@ import SidebarComponent from "@/components/shared/SidebarComponent.vue";
 import MenuComponent from "@/components/shared/MenuComponent.vue";
 import ContentComponent from "@/components/shared/ContentComponent.vue";
 
+
 @Component({
     name: "MainComponent",
     components: {
@@ -38,7 +43,7 @@ import ContentComponent from "@/components/shared/ContentComponent.vue";
 export default class MainComponent extends Vue {
     showMenu = false;
     showMenuContent = false;
-    mini=true;
+    mini = true;
 }
 </script>
 
