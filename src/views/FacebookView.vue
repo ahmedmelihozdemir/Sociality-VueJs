@@ -1,14 +1,25 @@
 <template>
-    <div>
-        <v-card class="mx-auto" max-width="500">
+    <v-main>
+        <v-card
+            class="mx-auto my-5"
+            max-width="500"
+            outlined
+            v-for="(i, inf, idx) in facebookData"
+            :key="inf"
+        >
+            <v-card-title> {{ i[idx].published_at }} </v-card-title>
             <v-img
-                src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+                v-for="(a, adx) in i"
+                :key="adx"
+                :src="a.entry.image[0]"
+                @error="errorImage"
                 height="300px"
-            ></v-img>
+            >
+                {{ a.published_at }}
+                <v-card-subtitle> {{ i[idx].entry.message }} </v-card-subtitle>
+            </v-img>
 
-            <v-card-title> Top western road trips </v-card-title>
-
-            <v-card-subtitle> 1,000 miles of wonder </v-card-subtitle>
+            <v-card-subtitle> {{ i[idx].entry.image }} </v-card-subtitle>
 
             <v-card-actions>
                 <v-btn color="orange lighten-2" text> Explore </v-btn>
@@ -37,17 +48,25 @@
                 </div>
             </v-expand-transition>
         </v-card>
-    </div>
+    </v-main>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
+import datas from "@/data.json";
 
 @Component({
     components: {},
 })
 export default class FacebookView extends Vue {
     show = false;
+    facebookData = datas.posts_by_date;
+
+    errorImage(event: any) {
+        event.target.src = "nopostimage.png";
+    }
 }
 </script>
+
+<style scoped lang="scss"></style>
